@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-# 8-multiple_returns.py
+"""
+Module 8-multiple_returns
+Retourne la taille d'une chaîne et son premier caractère.
+"""
 
 def multiple_returns(sentence):
-    """ returns a tuple with the length of a string and its firt character."""
-    if sentence == "":
+    """Retourne la longueur de sentence et le premier caractère ou None."""
+    if len(sentence) == 0:
         return (0, None)
-    return (len(sentence),sentence[0])
+    return (len(sentence), sentence[0])

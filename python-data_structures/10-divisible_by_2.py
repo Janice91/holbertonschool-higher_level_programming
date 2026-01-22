@@ -1,17 +1,9 @@
 #!/usr/bin/python3
-# 10-divisible_by_2.py
+"""
+Module 10-divisible_by_2
+Indique si un nombre est divisible par 2.
+"""
 
-def divisble_by_2(my_list=[]):
-        """Find all multiples of 2 in a list."""
-        multiples = []
-    
-        for i in range(len(my_list)):
-        
-            if my_list[i] % 2 == 0:
-            
-                multiples.append(True)
-           
-            else:
-            
-                multiples.append(False)
-                return (multiples)
+def divisible_by_2(my_list=[]):
+    """Retourne une liste de True/False pour divisibilité par 2."""
+    return [i % 2 == 0 for i in my_list]

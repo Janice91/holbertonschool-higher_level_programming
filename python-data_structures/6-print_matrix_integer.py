@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-# 6-print_matrix_integer.py
+"""
+Module 6-print_matrix_integer
+Affiche une matrice d'entiers.
+"""
 
 def print_matrix_integer(matrix=[[]]):
-    """ print a matrix of integers."""
-    
-    for i in range(len(matrix)):
-        
-        for j in range(len(matrix[i])):
-              
-            print("{:d}".format(matrix[i][j]), end="")
-            
-            if j != (len(matrix[i]) - 1):
-                
-                print(" ", end="")
-
-    
-        print("")
+    """Affiche la matrice d'entiers."""
+    for row in matrix:
+        print(" ".join("{:d}".format(i) for i in row))

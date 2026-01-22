@@ -1,20 +1,15 @@
 #!/usr/bin/python3
-# 9-max_integer.py
+"""
+Module 9-max_integer
+Retourne le plus grand entier d'une liste.
+"""
 
 def max_integer(my_list=[]):
-    """Finds the biggest integer of a list."""
-    
-    if len(my_list) == 0:
-            
-        return (None)
-
-            
-    big = my_list[0]
-            
-    for i in range(len(my_list)):
-                
-        if my_list[i] > big:
-                    
-            big = my_list[i]
-
-    return (big)
+    """Retourne le plus grand entier dans la liste, ou None si vide."""
+    if not my_list:
+        return None
+    max_val = my_list[0]
+    for i in my_list:
+        if i > max_val:
+            max_val = i
+    return max_val
