@@ -1,0 +1,6 @@
+```
+main_*.py
+test_*.py
+__pycache__/
+*.pyc
+*.pyo
