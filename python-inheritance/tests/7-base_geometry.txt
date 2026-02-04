@@ -42,8 +42,14 @@ Traceback (most recent call last):
 ...
 TypeError: value must be an integer
 
-# Test with boolean (True is considered as int in Python)
+# Test with boolean True
 >>> bg.integer_validator("flag", True)
+Traceback (most recent call last):
+...
+TypeError: flag must be an integer
+
+# Test with boolean False
+>>> bg.integer_validator("flag", False)
 Traceback (most recent call last):
 ...
 TypeError: flag must be an integer
@@ -72,12 +78,6 @@ Traceback (most recent call last):
 ...
 TypeError: set must be an integer
 
-# Test with negative zero (should fail)
->>> bg.integer_validator("zero", -0)
-Traceback (most recent call last):
-...
-ValueError: zero must be greater than 0
-
 # Test with large positive number
 >>> bg.integer_validator("big", 999999999)
 
@@ -86,3 +86,35 @@ ValueError: zero must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: negative must be greater than 0
+
+# Test with one argument missing
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+# Test with no arguments
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test with too many arguments
+>>> bg.integer_validator("name", 1, 2)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+# Test area with arguments
+>>> bg.area(5)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+
+# Test print the class
+>>> print(bg)
+<7-base_geometry.BaseGeometry object at ...>
+
+# Test type
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
