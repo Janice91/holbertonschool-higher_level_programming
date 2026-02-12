@@ -1,13 +1,8 @@
 #!/usr/bin/python3
-"""Module pour lire un fichier texte"""
+"""Module to read a file"""
 
 
 def read_file(filename=""):
-    """
-    Lit un fichier texte (UTF-8) et l'affiche sur stdout
-    
-    Args:
-        filename: Le nom du fichier à lire (par défaut "")
-    """
+    """Reads a text file (UTF8) and prints it to stdout"""
     with open(filename, 'r', encoding='utf-8') as f:
         print(f.read(), end='')
