@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that takes an argument and displays states matching the name safely."""
+"""Script that displays states matching the name safely."""
 import MySQLdb
 import sys
 
